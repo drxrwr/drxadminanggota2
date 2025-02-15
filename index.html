@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TXT to VCF Converter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>TXT to VCF Converter</h1>
+  <div class="container">
+    <label for="file-input">Pilih File TXT:</label>
+    <input type="file" id="file-input" accept=".txt" multiple>
+
+    <label for="contactName1Input">Nama Kontak 1 (Nomor Pertama):</label>
+    <input type="text" id="contactName1Input" placeholder="Nama Kontak 1">
+
+    <label for="contactName2Input">Nama Kontak 2 (Nomor Berikutnya):</label>
+    <input type="text" id="contactName2Input" placeholder="Nama Kontak 2">
+
+    <label for="renameMode">Pilih Mode Ganti Nama:</label>
+    <select id="renameMode">
+      <option value="original">Nama seperti biasa</option>
+      <option value="1">1 Karakter Terakhir</option>
+      <option value="2">2 Karakter Terakhir</option>
+      <option value="3">3 Karakter Terakhir</option>
+      <option value="4">4 Karakter Terakhir</option>
+    </select>
+
+    <label for="mergeOption">Pilih Mode Penyimpanan:</label>
+    <select id="mergeOption">
+      <option value="pisah">Pisah File</option>
+      <option value="gabung">Gabung Semua</option>
+    </select>
+
+    <button id="processFilesBtn">Proses File</button>
+    <div id="file-areas"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
